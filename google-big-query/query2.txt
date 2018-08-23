@@ -1,0 +1,8 @@
+SELECT
+  SUM(count)
+FROM
+  [query-names:baby.baby_names]
+WHERE
+  gender = 'M'
+  AND year < 2011
+  AND name LIKE 'T%';

@@ -1,0 +1,38 @@
+Task 1:
+
+SELECT
+  *
+FROM
+  [query-names:baby.baby_names]
+WHERE
+  gender = 'F'
+  AND year > 2008
+  AND count >= 7000
+  AND count <= 17000;
+
+Task 2:
+
+SELECT
+  COUNT(*)
+FROM
+  [query-names:baby.baby_names]
+WHERE
+  gender = 'M'
+  AND year < 2011
+  AND name LIKE 'T%';
+
+Task 3:
+
+SELECT
+  name,
+  SUM(count) AS freq
+FROM
+  [query-names:baby.baby_names]
+WHERE
+  year > 2006
+GROUP BY
+  name
+ORDER BY
+  freq DESC
+LIMIT
+  20;

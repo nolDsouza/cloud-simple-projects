@@ -1,0 +1,9 @@
+SELECT
+  *
+FROM
+  [query-names:baby.baby_names]
+WHERE
+  gender = 'F'
+  AND year > 2008
+  AND count >= 7000
+  AND count <= 17000;

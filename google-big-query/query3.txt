@@ -1,0 +1,13 @@
+SELECT
+  name,
+  SUM(count) AS freq
+FROM
+  [query-names:baby.baby_names]
+WHERE
+  year > 2006
+GROUP BY
+  name
+ORDER BY
+  freq DESC
+LIMIT
+  20;
